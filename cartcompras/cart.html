@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Carrinho</title>
+    <link rel="shortcut icon" href="../logosite/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="cart.css">
+    
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="../pagprincipal.html">
+                <h1>CH <span>IMPORTS</span></h1>
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../pagprincipal.html" class="btn-flutuante">Início</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="cart-details">
+            <h1>Carrinho de Compras</h1>
+            <div id="carrinho"></div>
+            <p id="total"></p>
+            <button onclick="finalizarCompra()">Finalizar Compra</button>
+        </section>
+    </main>
+
+    <script>
+        function formatarPreco(preco) {
+            return preco.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+        }
+
+        function carregarCarrinho() {
+            let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+            let carrinhoContainer = document.getElementById('carrinho');
+            let total = 0;
+
+            carrinhoContainer.innerHTML = '';
+
+            carrinho.forEach((item, index) => {
+                total += parseFloat(item.preco);
+
+                let itemDiv = document.createElement('div');
+                itemDiv.className = 'carrinho-item';
+                itemDiv.innerHTML = `
+                    <img src="${item.imagem}" alt="Imagem do Produto">
+                    <p>Nome: ${item.nome}</p>
+                    <p>Preço: ${formatarPreco(item.preco)}</p>
+                    <button onclick="removerDoCarrinho(${index})">Remover</button>
+                `;
+                carrinhoContainer.appendChild(itemDiv);
+            });
+
+            document.getElementById('total').innerText = `Total: ${formatarPreco(total)}`;
+        }
+
+        function removerDoCarrinho(index) {
+            let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+            carrinho.splice(index, 1);
+            localStorage.setItem('carrinho', JSON.stringify(carrinho));
+            carregarCarrinho();
+        }
+
+        function finalizarCompra() {
+            alert('Compra finalizada!');
+            localStorage.removeItem('carrinho');
+            carregarCarrinho();
+        }
+
+        window.onload = carregarCarrinho;
+    </script>
+    
+</body>
+</html>
+
+
+

@@ -1,0 +1,248 @@
+@charset "UTF-8";
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    margin-top: 70px;
+    box-sizing: border-box;
+}
+
+/* ── Header ─────────────────────────────────────────────── */
+header {
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #333939;
+    color: #F25116;
+}
+
+.container2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333939;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+    position: relative;
+    z-index: 900;
+}
+
+.logo h1 {
+    color: #cc4514;
+    font-size: 1.6em;
+}
+
+.logo span {
+    color: white;
+}
+
+.logo a {
+    text-decoration: none;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #F25116;
+    font-weight: bold;
+}
+
+nav ul li:hover {
+    background-color: #333939;
+}
+
+nav ul li:hover a {
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+    font-size: 1.1em;
+    transition: 0.3s;
+}
+
+.search input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.search button {
+    padding: 8px 16px;
+    background-color: #F25116;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.search button:hover {
+    background-color: #cc4514;
+}
+
+.cart {
+    margin: 25px;
+}
+
+.cart img {
+    width: 35px;
+    height: auto;
+}
+
+/* ── Detalhes do produto ─────────────────────────────────── */
+.product-details {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+}
+
+.product-image img {
+    max-width: 100%;
+    height: auto;
+    padding: 90px;
+}
+
+.product-info {
+    margin-left: 20px;
+}
+
+.product-info h1 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #FF7F00;
+    margin-bottom: 10px;
+}
+
+.description {
+    margin-bottom: 20px;
+}
+
+.actions button {
+    padding: 10px 20px;
+    background-color: #FF7F00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.actions button:hover {
+    background-color: #cc6600;
+}
+
+/* ── Produtos relacionados ───────────────────────────────── */
+.similar-products {
+    margin: 20px;
+}
+
+.products-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.product-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 160px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-card img {
+    max-width: 80px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.product-card p {
+    margin-bottom: 5px;
+    font-size: 0.85em;
+    flex-grow: 1;
+}
+
+.product-card .price {
+    font-weight: bold;
+    color: #FF7F00;
+    margin-bottom: 10px;
+    flex-grow: 0;
+}
+
+.product-card button {
+    padding: 8px 16px;
+    background-color: #FF7F00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: auto;
+    width: 100%;
+}
+
+.product-card button:hover {
+    background-color: #cc6600;
+}
+
+/* ── Footer ──────────────────────────────────────────────── */
+footer {
+    background-color: #333;
+    color: #F25116;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-section {
+    flex: 1 1 200px;
+    margin: 10px;
+}
+
+.footer-section h4 {
+    margin-bottom: 10px;
+}
+
+.footer-section p {
+    margin: 5px 0;
+}
+
+.footer-section a {
+    color: #F25116;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.footer-bottom {
+    border-top: 1px solid #444;
+    padding-top: 10px;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
