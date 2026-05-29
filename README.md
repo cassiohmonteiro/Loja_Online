@@ -37,18 +37,6 @@ Projeto acadêmico desenvolvido para a disciplina de **Desenvolvimento Web**. Tr
 
 Não há dependências ou instalação necessária. Basta abrir o arquivo `pagprincipal.html` no navegador — ou, para evitar restrições de CORS com arquivos locais, usar uma extensão como o **Live Server** (VS Code).
 
-## 📦 Produtos disponíveis
-
-| Produto | Preço |
-|---|---|
-| Smartphone Motorola Moto G54 | R$ 999,00 |
-| iPhone 13 Apple 128GB | R$ 3.599,00 |
-| Apple iPhone 14 Pro | R$ 7.531,50 |
-| Smartphone Motorola Moto G84 5G | R$ 1.389,00 |
-| Smartphone Xiaomi Redmi 13C | R$ 1.499,00 |
-| Samsung Galaxy S21 | R$ 2.999,00 |
-| Apple iPad 10ª Geração | R$ 2.448,80 |
-| Tablet Samsung Galaxy Tab S6 Lite | R$ 1.865,00 |
 
 ## 👨‍💻 Autor
 
